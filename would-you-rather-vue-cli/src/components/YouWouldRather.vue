@@ -1,6 +1,8 @@
 <template>
     <div>
-        {{ message }}
+    <li v-for="message in messages">
+        {{ message}}<br>
+    </li>
     </div>
 </template>
 
@@ -8,7 +10,7 @@
     export default {
         name: "YouWouldRather",
         props:{
-            message:String
+            messages:Array
         }
     }
 </script>

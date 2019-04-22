@@ -9,9 +9,9 @@
           v-bind:answer2="question.answer2"
             v-on:answer-changed="answerChanged">
     </WouldYouRatherQuestion>
-
+    <h2>You Would Rather</h2>
       <YouWouldRather
-              v-bind:message="userSelectionMessage">
+              v-bind:messages="userSelectionMessage">
       </YouWouldRather>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      userSelectionMessage:'',
+      userSelectionMessage:[],
       questions: [
         {
           id:0,
@@ -53,7 +53,8 @@ export default {
   },
   methods: {
     answerChanged(answer){
-        this.userSelectionMessage = `Thanks! You selected ${answer}`
+      var message = `Thanks! You selected ${answer}`
+        this.userSelectionMessage.push(message)
     }
 
   }
@@ -62,11 +63,11 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Times, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #2c3e59;
+  margin-top: 50px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="WouldQuestion">
         <div>
             <h1>Would you rather...</h1>
             <p>{{question}}</p>
@@ -32,5 +32,11 @@
 </script>
 
 <style scoped>
-
+    .WouldQuestion{
+    font-family: monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #5c2e59;
+    margin-top: 50px;}
 </style>
